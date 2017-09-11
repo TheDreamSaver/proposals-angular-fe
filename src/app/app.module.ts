@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from "@angular/forms";
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HomepageComponent } from './homepage/homepage.component';
 import { DocumentsComponent } from './documents/documents.component';
@@ -15,7 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
      HomepageComponent, AppComponent, DocumentsComponent, ProposalListComponent, ProposalNewComponent, ProposalShowComponent
   ],
   imports: [
-    BrowserModule, AppRoutingModule, FormsModule
+    BrowserModule, AppRoutingModule, FormsModule, NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

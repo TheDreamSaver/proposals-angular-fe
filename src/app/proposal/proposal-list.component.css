@@ -1,0 +1,8 @@
+.headline {
+    color: white;
+    text-align: center;
+}
+
+.proposal-link:hover {
+    text-decoration: none;
+}

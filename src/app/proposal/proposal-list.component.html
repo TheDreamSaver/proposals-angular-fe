@@ -1,6 +1,15 @@
-<h1>Welcome to proposal list</h1>
+<div class="container">
+    <div class="list-group">
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+            <h1 class="mb-1 headline">Welcome to proposal list</h1>
+        </a>
 
-<div *ngFor = "let proposal of proposals">
-    <a routerLink="/proposal/{{proposal.id}}">{{proposal.id}} - {{proposal.customer}} : {{proposal.portfolio_url}}</a>
-
+        <span *ngFor = "let proposal of proposals">
+            <a routerLink="/proposal/{{proposal.id}}" class="proposal-link list-group-item list-group-item-action flex-column align-items-start">
+                <h5 class="mb-1 list-group-item-heading">{{proposal.id}}</h5>
+                <p class="mb-1 list-group-item-text">{{ proposal.hourly_rate * proposal.estimated_hours | currency:'INR':true:'.0'}}</p>
+            </a>
+        </span>
+    </div>    
 </div>
+
