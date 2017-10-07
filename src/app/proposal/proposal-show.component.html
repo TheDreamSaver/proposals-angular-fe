@@ -4,7 +4,7 @@
       <div class="col-md-12">
          <p> Hi {{ proposal.customer }}, </p>
          <p> I will be utilizing {{ proposal.tools }} </p>
-         <p> The project should take {{ proposal.weeks_to_complete }} weeks and {{ proposal.estimated_hours }} hours of total development time at a rate of {{ proposal.hourly_rate | currency:'INR':true:'.0'}}/hour.  The total will be {{ proposal.hourly_rate * proposal.estimated_hours | currency:'INR':true:'.0'}}</p>
+         <p> The project should take {{ proposal.weeks_to_complete }} weeks and {{ proposal.estimated_hours }} hours of total development time at a rate of {{ proposal.hourly_rate | indianCurrency}}/hour.  The total will be {{ proposal.hourly_rate * proposal.estimated_hours | indianCurrency}}</p>
          <p>You can see my work <a href="{{proposal.portfolio_url}}">here</a></p>
       </div>
     </div>

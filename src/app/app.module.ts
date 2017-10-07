@@ -14,9 +14,11 @@ import { ProposalShowComponent } from './proposal/proposal-show.component';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { IndianCurrency } from './indianCurrency.pipe';
+
 @NgModule({
   declarations: [
-     HomepageComponent, AppComponent, DocumentsComponent, ProposalListComponent, ProposalNewComponent, ProposalShowComponent
+     HomepageComponent, AppComponent, DocumentsComponent, ProposalListComponent, ProposalNewComponent, ProposalShowComponent, IndianCurrency
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, NgbModule.forRoot(), HttpModule
