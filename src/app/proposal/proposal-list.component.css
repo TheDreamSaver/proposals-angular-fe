@@ -5,4 +5,5 @@
 
 .proposal-link:hover {
     text-decoration: none;
+    cursor: pointer;
 }

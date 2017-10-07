@@ -2,20 +2,31 @@ import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Rx';
 
-import { Document } from './document';
+import { Proposal } from './proposal';
 
 @Injectable()
-export class DocumentService {
+export class ProposalService {
+  private proposalsUrl = 'http://localhost:3001/proposals';
+
   constructor(
     private http: Http
   ) {}
 
-  private documentsUrl = 'http://localhost:3000/freelance_documents.json';
-
-  getDocuments(): Observable<Document[]> {
-    return this.http.get(this.documentsUrl)
-                    .map((response: Response) => response.json())
+  getProposals(): Observable<Proposal[]> {
+    return this.http.get(this.proposalsUrl)
+                    .map((response: Response) => <Proposal[]>response.json())
                     .catch(this.handleError);
+  }
+
+  getProposal(id: number) {
+    return this.http.get(this.proposalsUrl + "/" + id + '.json');
+  }
+
+  createProposal(proposal) {
+    let headers = new Headers({ 'Content-Type': 'application/json' });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.post(this.proposalsUrl, JSON.stringify(proposal), {
+      headers: headers}).map((res: Response) => res.json());
   }
 
   private handleError (error: Response | any) {

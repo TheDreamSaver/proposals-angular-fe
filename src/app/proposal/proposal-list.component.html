@@ -5,8 +5,8 @@
         </a>
 
         <span *ngFor = "let proposal of proposals">
-            <a routerLink="/proposal/{{proposal.id}}" class="proposal-link list-group-item list-group-item-action flex-column align-items-start">
-                <h5 class="mb-1 list-group-item-heading">{{proposal.id}}</h5>
+            <a (click)="goToShow(proposal)" class="proposal-link list-group-item list-group-item-action flex-column align-items-start">
+                <h5 class="mb-1 list-group-item-heading">{{proposal.customer}}</h5>
                 <p class="mb-1 list-group-item-text">{{ proposal.hourly_rate * proposal.estimated_hours | currency:'INR':true:'.0'}}</p>
             </a>
         </span>
