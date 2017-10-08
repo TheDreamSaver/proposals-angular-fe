@@ -1,0 +1,287 @@
+<div class="card container form-container">
+    <div class="row">        
+        <div class="col-md-6">
+            <h1>Scholarship Application</h1>
+            
+            <div>
+                <form #scholarshipapplication="ngForm">
+                    <div class="form-group">
+                        <label for="dateofwriting">Date of Writing</label>
+                        <input type="text"
+                                class="form-control"
+                                id="dateofwriting"
+                                required
+                                name="dateofwriting"
+                                #dateofwriting='ngModel'
+                                [(ngModel)]="scholarshipapplication.dateofwriting"
+                                >
+                        <div [hidden]="dateofwriting.valid || dateofwriting.pristine" class="alert alert-danger">
+                            Date of Writing is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empname">Employer Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="empname"
+                                placeholder="ABC Kumar"
+                                required
+                                name="empname"
+                                #empname="ngModel"
+                                [(ngModel)]="scholarshipapplication.empname"
+                                >
+                        <div [hidden]="empname.valid || empname.pristine" class="alert alert-danger">
+                            Employer name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="emporg">Employer Organisation</label>
+                        <input type="text"
+                                class="form-control"
+                                id="emporg"
+                                placeholder="Investopad Pvt. Ltd."
+                                required
+                                name="emporg"
+                                #emporg='ngModel'
+                                [(ngModel)]="scholarshipapplication.emporg"
+                                >
+                        <div [hidden]="emporg.valid || emporg.pristine" class="alert alert-danger">
+                            Employer Organisation is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empaddress">Employer Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="empaddress"
+                                placeholder="Investopad"
+                                required
+                                name="empaddress"
+                                #empaddress='ngModel'
+                                [(ngModel)]="scholarshipapplication.empaddress"
+                                >
+                        <div [hidden]="empaddress.valid || empaddress.pristine" class="alert alert-danger">
+                            Employer Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="empaddress2">Employer Address Line 2</label>
+                      <input type="text"
+                              class="form-control"
+                              id="empaddress2"
+                              placeholder="Malviya Nagar, New Delhi - 110072"
+                              name="empaddress2"
+                              #empaddress2='ngModel'
+                              [(ngModel)]="scholarshipapplication.empaddress2"
+                              >
+                    </div>
+                    <div class="form-group">
+                        <label for="myname">Your Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="myname"
+                                placeholder="XYZ Kumar"
+                                required
+                                name="myname"
+                                #myname="ngModel"
+                                [(ngModel)]="scholarshipapplication.myname"
+                                >
+                        <div [hidden]="myname.valid || myname.pristine" class="alert alert-danger">
+                            Your name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress">Your Current Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress"
+                                placeholder="323, Saket"
+                                required
+                                name="myaddress"
+                                #myaddress='ngModel'
+                                [(ngModel)]="scholarshipapplication.myaddress"
+                                >
+                        <div [hidden]="myaddress.valid || myaddress.pristine" class="alert alert-danger">
+                            Your Current Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress2">Your Current Address Line 2</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress2"
+                                placeholder="New Delhi - 110049"
+                                name="myaddress2"
+                                #myaddress2='ngModel'
+                                [(ngModel)]="scholarshipapplication.myaddress2"
+                                >
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year In College</label>
+                        <input type="text"
+                                class="form-control"
+                                id="year"
+                                placeholder="1st/2nd/3rd/4th"
+                                required
+                                name="year"
+                                #year='ngModel'
+                                [(ngModel)]="scholarshipapplication.year"
+                                >
+                        <div [hidden]="year.valid || year.pristine" class="alert alert-danger">
+                            Year is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">Degree</label>
+                        <input type="text"
+                                class="form-control"
+                                id="degree"
+                                placeholder="B.Tech/B.Sc"
+                                required
+                                name="degree"
+                                #degree='ngModel'
+                                [(ngModel)]="scholarshipapplication.degree"
+                                >
+                        <div [hidden]="degree.valid || degree.pristine" class="alert alert-danger">
+                            Degree is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Branch</label>
+                        <input type="text"
+                                class="form-control"
+                                id="branch"
+                                placeholder="CSE/Economics"
+                                required
+                                name="branch"
+                                #branch='ngModel'
+                                [(ngModel)]="scholarshipapplication.branch"
+                                >
+                        <div [hidden]="branch.valid || branch.pristine" class="alert alert-danger">
+                            Branch is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="institute">Institute</label>
+                        <input type="text"
+                                class="form-control"
+                                id="institute"
+                                placeholder="CIC/IIT/NIT"
+                                required
+                                name="institute"
+                                #institute='ngModel'
+                                [(ngModel)]="scholarshipapplication.institute"
+                                >
+                        <div [hidden]="institute.valid || institute.pristine" class="alert alert-danger">
+                            Institute is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reason">Reasons for Scholarship</label>
+                        <input type="text"
+                                class="form-control"
+                                id="reason"
+                                placeholder="family income etc."
+                                required
+                                name="reason"
+                                #reason='ngModel'
+                                [(ngModel)]="scholarshipapplication.reason"
+                                >
+                        <div [hidden]="reason.valid || reason.pristine" class="alert alert-danger">
+                            Current Organisation is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="activities">Activities</label>
+                        <input type="text"
+                                class="form-control"
+                                id="activities"
+                                placeholder="Sports/Music/Dance"
+                                required
+                                name="activities"
+                                #activities='ngModel'
+                                [(ngModel)]="scholarshipapplication.activities"
+                                >
+                        <div [hidden]="activities.valid || activities.pristine" class="alert alert-danger">
+                            Activities is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dreamof">Dream of Becoming</label>
+                        <input type="text"
+                                class="form-control"
+                                id="dreamof"
+                                placeholder="lawyer/doctor/scientist"
+                                required
+                                name="dreamof"
+                                #dreamof='ngModel'
+                                [(ngModel)]="scholarshipapplication.dreamof"
+                                >
+                        <div [hidden]="dreamof.valid || dreamof.pristine" class="alert alert-danger">
+                            Dream of Becoming is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myphoneno">Phone Number</label>
+                        <input type="number"
+                                class="form-control"
+                                id="myphoneno"
+                                placeholder="9999888800"
+                                required
+                                minlength="10"
+                                name="myphoneno"
+                                #myphoneno='ngModel'
+                                [(ngModel)]="scholarshipapplication.myphoneno"
+                                >
+                        <div [hidden]="myphoneno.valid || myphoneno.pristine" class="alert alert-danger">
+                            Phone Number is required
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+  
+        <div class="col-md-6">
+            <div>
+                <br><br><br><br><br><br>
+                <p>To, <br>
+                   {{ scholarshipapplication.empname }} <br>
+                   {{ scholarshipapplication.emporg }} <br>
+                   {{ scholarshipapplication.empaddress }} <br>
+                   {{ scholarshipapplication.empaddress2 }}
+                </p>
+  
+                <p>From, <br>
+  
+                   {{ scholarshipapplication.myname }} <br>
+                   {{ scholarshipapplication.myaddress }} <br>
+                   {{ scholarshipapplication.myaddress2 }}
+                </p>
+                <p>Date : {{ scholarshipapplication.dateofwriting }}</p>
+  
+                <p>Dear Mr/Ms {{ scholarshipapplication.empname }}, </p>
+  
+                <p>I am studying in {{ scholarshipapplication.year }} year, {{ scholarshipapplication.degree }} in {{ scholarshipapplication.branch }} from {{ scholarshipapplication.institute }}. I am a merit student and topped my college in 12th class.  Along with academics, I am interested in activities like {{ scholarshipapplication.activities }}.</p>
+  
+                <p>I am unable to afford my college fees as {{ scholarshipapplication.reason }}.I know that your organization supports meritorious and deserving students. In this regard I request you to grant a scholarship to support my educational needs. I am sending all my certificates for your perusal.</p>
+
+                <p>Your organization has the reputation of helping hundreds of students and I hope I will be one among them. With your support I will be able to fulfill my dream of becoming a {{ scholarshipapplication.dreamof }}.</p>
+
+                <p>Please see my application and certificates which are needed to grant the scholarship. Please inform me through email so that I can come and meet you in person.</p>
+
+                <p>Organizations like yours are doing yeoman service in the field of education and it is a boon for people like us who want to study but cannot afford the increasing fees in colleges.</p>
+  
+                <p>Looking forward to hear a positive response from you,</p>
+  
+                <p>Thanking you,</p>
+  
+                <p>Yours Sincerely,<br>
+                   {{ scholarshipapplication.myname }} <br>
+                   {{ scholarshipapplication.myphoneno }} </p>
+  
+  
+            </div>
+        </div>
+    </div>      
+  </div>
+  

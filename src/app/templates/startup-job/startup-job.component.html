@@ -1,0 +1,294 @@
+<div class="card container form-container">
+    <div class="row">        
+        <div class="col-md-6">
+            <h1>Pitch for a StartUp Job</h1>
+            
+            <div>
+                <form #startupjob="ngForm">
+                    <div class="form-group">
+                        <label for="dateofwriting">Date of Writing</label>
+                        <input type="text"
+                                class="form-control"
+                                id="dateofwriting"
+                                required
+                                name="dateofwriting"
+                                #dateofwriting='ngModel'
+                                [(ngModel)]="startupjob.dateofwriting"
+                                >
+                        <div [hidden]="dateofwriting.valid || dateofwriting.pristine" class="alert alert-danger">
+                            Date of Writing is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empname">Employer Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="empname"
+                                placeholder="ABC Kumar"
+                                required
+                                name="empname"
+                                #empname="ngModel"
+                                [(ngModel)]="startupjob.empname"
+                                >
+                        <div [hidden]="empname.valid || empname.pristine" class="alert alert-danger">
+                            Employer name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="emporg">Employer Organisation</label>
+                        <input type="text"
+                                class="form-control"
+                                id="emporg"
+                                placeholder="Investopad Pvt. Ltd."
+                                required
+                                name="emporg"
+                                #emporg='ngModel'
+                                [(ngModel)]="startupjob.emporg"
+                                >
+                        <div [hidden]="emporg.valid || emporg.pristine" class="alert alert-danger">
+                            Employer Organisation is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empaddress">Employer Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="empaddress"
+                                placeholder="Investopad"
+                                required
+                                name="empaddress"
+                                #empaddress='ngModel'
+                                [(ngModel)]="startupjob.empaddress"
+                                >
+                        <div [hidden]="empaddress.valid || empaddress.pristine" class="alert alert-danger">
+                            Employer Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="empaddress2">Employer Address Line 2</label>
+                      <input type="text"
+                              class="form-control"
+                              id="empaddress2"
+                              placeholder="Malviya Nagar, New Delhi - 110072"
+                              name="empaddress2"
+                              #empaddress2='ngModel'
+                              [(ngModel)]="startupjob.empaddress2"
+                              >
+                    </div>
+                    <div class="form-group">
+                        <label for="myname">Your Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="myname"
+                                placeholder="XYZ Kumar"
+                                required
+                                name="myname"
+                                #myname="ngModel"
+                                [(ngModel)]="startupjob.myname"
+                                >
+                        <div [hidden]="myname.valid || myname.pristine" class="alert alert-danger">
+                            Your name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress">Your Current Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress"
+                                placeholder="323, Saket"
+                                required
+                                name="myaddress"
+                                #myaddress='ngModel'
+                                [(ngModel)]="startupjob.myaddress"
+                                >
+                        <div [hidden]="myaddress.valid || myaddress.pristine" class="alert alert-danger">
+                            Your Current Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress2">Your Current Address Line 2</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress2"
+                                placeholder="New Delhi - 110049"
+                                name="myaddress2"
+                                #myaddress2='ngModel'
+                                [(ngModel)]="startupjob.myaddress2"
+                                >
+                    </div>
+                    <div class="form-group">
+                        <label for="lastorg">Previously Worked At</label>
+                        <input type="text"
+                                class="form-control"
+                                id="lastorg"
+                                placeholder="Facebook/Apple"
+                                required
+                                name="lastorg"
+                                #lastorg='ngModel'
+                                [(ngModel)]="startupjob.lastorg"
+                                >
+                        <div [hidden]="lastorg.valid || lastorg.pristine" class="alert alert-danger">
+                            Previously Worked At is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="keyactivities">Key Activities There</label>
+                        <input type="text"
+                                class="form-control"
+                                id="keyactivities"
+                                placeholder="Front End/DevOps"
+                                required
+                                name="keyactivities"
+                                #keyactivities='ngModel'
+                                [(ngModel)]="startupjob.keyactivities"
+                                >
+                        <div [hidden]="keyactivities.valid || keyactivities.pristine" class="alert alert-danger">
+                            Key Activities There is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="specifics">Specifics</label>
+                        <input type="text"
+                                class="form-control"
+                                id="specifics"
+                                placeholder="Implemented React/RxJs"
+                                required
+                                name="specifics"
+                                #specifics='ngModel'
+                                [(ngModel)]="startupjob.specifics"
+                                >
+                        <div [hidden]="specifics.valid || specifics.pristine" class="alert alert-danger">
+                            Specifics is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="experience">Experience</label>
+                        <input type="text"
+                                class="form-control"
+                                id="experience"
+                                placeholder="3 months/2 years"
+                                required
+                                name="experience"
+                                #experience='ngModel'
+                                [(ngModel)]="startupjob.experience"
+                                >
+                        <div [hidden]="experience.valid || experience.pristine" class="alert alert-danger">
+                            Experience is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="bestat">What Are You Best At</label>
+                        <input type="text"
+                                class="form-control"
+                                id="bestat"
+                                placeholder="Full Stack/Back End"
+                                required
+                                name="bestat"
+                                #bestat='ngModel'
+                                [(ngModel)]="startupjob.bestat"
+                                >
+                        <div [hidden]="bestat.valid || bestat.pristine" class="alert alert-danger">
+                            What Are You Best At is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="idealrole">Desired Ideal Role</label>
+                        <input type="text"
+                                class="form-control"
+                                id="idealrole"
+                                placeholder="Software Engineer/Marketing Specialist"
+                                required
+                                name="idealrole"
+                                #idealrole='ngModel'
+                                [(ngModel)]="startupjob.idealrole"
+                                >
+                        <div [hidden]="idealrole.valid || idealrole.pristine" class="alert alert-danger">
+                            Desired Ideal Role is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="portfolio_url">Portfolio URL</label>
+                        <input type="text"
+                                class="form-control"
+                                id="portfolio_url"
+                                required
+                                name="portfolio_url"
+                                #portfolio_url='ngModel'
+                                [(ngModel)]="startupjob.portfolio_url"
+                                >
+                        <div [hidden]="portfolio_url.valid || portfolio_url.pristine" class="alert alert-danger">
+                            A Portfolio Url is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedin_url">LinkedIn Profile</label>
+                        <input type="text"
+                                class="form-control"
+                                id="linkedin_url"
+                                required
+                                name="linkedin_url"
+                                #linkedin_url='ngModel'
+                                [(ngModel)]="startupjob.linkedin_url"
+                                >
+                        <div [hidden]="linkedin_url.valid || linkedin_url.pristine" class="alert alert-danger">
+                            LinkedIn Profile is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myphoneno">Phone Number</label>
+                        <input type="number"
+                                class="form-control"
+                                id="myphoneno"
+                                placeholder="9999888800"
+                                required
+                                minlength="10"
+                                name="myphoneno"
+                                #myphoneno='ngModel'
+                                [(ngModel)]="startupjob.myphoneno"
+                                >
+                        <div [hidden]="myphoneno.valid || myphoneno.pristine" class="alert alert-danger">
+                            Phone Number is required
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+  
+        <div class="col-md-6">
+            <div>
+                <br><br><br><br><br><br>
+                <p>To, <br>
+                   {{ startupjob.empname }} <br>
+                   {{ startupjob.emporg }} <br>
+                   {{ startupjob.empaddress }} <br>
+                   {{ startupjob.empaddress2 }}
+                </p>
+  
+                <p>From, <br>
+  
+                   {{ startupjob.myname }} <br>
+                   {{ startupjob.myaddress }} <br>
+                   {{ startupjob.myaddress2 }}
+                </p>
+                <p>Date : {{ startupjob.dateofwriting }}</p>
+  
+                <p>Dear Mr/Ms {{ startupjob.empname }}, </p>
+  
+                <p>Hi, My name is {{ startupjob.myname }}. I previously worked at {{ startupjob.lastorg }}. I was responsible for {{ startupjob.keyactivities }} where I did {{ startupjob.specifics }} for a period of {{ startupjob.experience }}. I am good at {{ startupjob.bestat }} and would like to explore a position doing {{ startupjob.idealrole }}.</p>
+  
+                <p>You can find a portfolio of my work at : <a href="{{ startupjob.portfolio_url }}">{{ startupjob.myname }}'s Portfolio</a> and my updated linkedin profile is <a href="{{ startupjob.linkedin_url }}">here</a>.</p>
+  
+                <p>Looking forward to hear a positive response from you,</p>
+  
+                <p>Thanking you,</p>
+  
+                <p>Yours Sincerely,<br>
+                   {{ startupjob.myname }} <br>
+                   {{ startupjob.myphoneno }} </p>
+  
+  
+            </div>
+        </div>
+    </div>      
+  </div>
+  

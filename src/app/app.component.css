@@ -1,5 +1,6 @@
 .app-body{
-    margin-top: 80px;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
 
 .nav-styles{
@@ -24,4 +25,33 @@
 
 .dropdown-links a:hover {
     color: #252830;
+}
+
+#templateDropdown {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#otherTemplateDropdown {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+#proposalDropdown {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+#footie {
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+  
+#footie > a {
+    text-decoration: none;
+}
+
+#footie > span {
+    color: red;
 }

@@ -1,0 +1,313 @@
+<div class="card container form-container">
+    <div class="row">        
+        <div class="col-md-6">
+            <h1>Job Referral Form</h1>
+            
+            <div>
+                <form #jobreferral="ngForm">
+                    <div class="form-group">
+                        <label for="dateofwriting">Date of Writing</label>
+                        <input type="text"
+                                class="form-control"
+                                id="dateofwriting"
+                                required
+                                name="dateofwriting"
+                                #dateofwriting='ngModel'
+                                [(ngModel)]="jobreferral.dateofwriting"
+                                >
+                        <div [hidden]="dateofwriting.valid || dateofwriting.pristine" class="alert alert-danger">
+                            Date of Writing is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empname">Employer Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="empname"
+                                placeholder="ABC Kumar"
+                                required
+                                name="empname"
+                                #empname="ngModel"
+                                [(ngModel)]="jobreferral.empname"
+                                >
+                        <div [hidden]="empname.valid || empname.pristine" class="alert alert-danger">
+                            Employer name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="emporg">Employer Organisation</label>
+                        <input type="text"
+                                class="form-control"
+                                id="emporg"
+                                placeholder="Investopad Pvt. Ltd."
+                                required
+                                name="emporg"
+                                #emporg='ngModel'
+                                [(ngModel)]="jobreferral.emporg"
+                                >
+                        <div [hidden]="emporg.valid || emporg.pristine" class="alert alert-danger">
+                            Employer Organisation is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empaddress">Employer Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="empaddress"
+                                placeholder="Investopad"
+                                required
+                                name="empaddress"
+                                #empaddress='ngModel'
+                                [(ngModel)]="jobreferral.empaddress"
+                                >
+                        <div [hidden]="empaddress.valid || empaddress.pristine" class="alert alert-danger">
+                            Employer Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="empaddress2">Employer Address Line 2</label>
+                      <input type="text"
+                              class="form-control"
+                              id="empaddress2"
+                              placeholder="Malviya Nagar, New Delhi - 110072"
+                              name="empaddress2"
+                              #empaddress2='ngModel'
+                              [(ngModel)]="jobreferral.empaddress2"
+                              >
+                    </div>
+                    <div class="form-group">
+                        <label for="myname">Your Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="myname"
+                                placeholder="XYZ Kumar"
+                                required
+                                name="myname"
+                                #myname="ngModel"
+                                [(ngModel)]="jobreferral.myname"
+                                >
+                        <div [hidden]="myname.valid || myname.pristine" class="alert alert-danger">
+                            Your name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress">Your Current Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress"
+                                placeholder="323, Saket"
+                                required
+                                name="myaddress"
+                                #myaddress='ngModel'
+                                [(ngModel)]="jobreferral.myaddress"
+                                >
+                        <div [hidden]="myaddress.valid || myaddress.pristine" class="alert alert-danger">
+                            Your Current Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress2">Your Current Address Line 2</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress2"
+                                placeholder="New Delhi - 110049"
+                                name="myaddress2"
+                                #myaddress2='ngModel'
+                                [(ngModel)]="jobreferral.myaddress2"
+                                >
+                    </div>
+                    <div class="form-group">
+                        <label for="post">Your Post</label>
+                        <input type="text"
+                                class="form-control"
+                                id="post"
+                                placeholder="Full Stack Developer"
+                                required
+                                name="post"
+                                #post='ngModel'
+                                [(ngModel)]="jobreferral.post"
+                                >
+                        <div [hidden]="post.valid || post.pristine" class="alert alert-danger">
+                            Your Post is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Your Department</label>
+                        <input type="text"
+                                class="form-control"
+                                id="department"
+                                placeholder="Software/Accounts"
+                                required
+                                name="department"
+                                #department='ngModel'
+                                [(ngModel)]="jobreferral.department"
+                                >
+                        <div [hidden]="department.valid || department.pristine" class="alert alert-danger">
+                            Your Department is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="addpost">Vacancy for Post</label>
+                        <input type="text"
+                                class="form-control"
+                                placeholder="Trainee/Software Developer"
+                                id="addpost"
+                                required
+                                name="addpost"
+                                #addpost='ngModel'
+                                [(ngModel)]="jobreferral.addpost"
+                                >
+                        <div [hidden]="addpost.valid || addpost.pristine" class="alert alert-danger">
+                            Vacancy for Post is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="friendname">Name of Person Referred</label>
+                        <input type="text"
+                                class="form-control"
+                                id="friendname"
+                                placeholder="JKL Kumar"
+                                required
+                                name="friendname"
+                                #friendname='ngModel'
+                                [(ngModel)]="jobreferral.friendname"
+                                >
+                        <div [hidden]="friendname.valid || friendname.pristine" class="alert alert-danger">
+                            Name of Person Referred is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="friendpost">{{ jobreferral.friendname }}'s Current Post</label>
+                        <input type="text"
+                                class="form-control"
+                                id="friendpost"
+                                placeholder="Full Stack/Software Developer"
+                                required
+                                name="friendpost"
+                                #friendpost='ngModel'
+                                [(ngModel)]="jobreferral.friendpost"
+                                >
+                        <div [hidden]="friendpost.valid || friendpost.pristine" class="alert alert-danger">
+                            {{ jobreferral.friendname }}'s Current Post is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="friendorg">{{ jobreferral.friendname }}'s Current Organisation</label>
+                        <input type="text"
+                                class="form-control"
+                                id="friendorg"
+                                placeholder="Google/Oracle/Adobe"
+                                required
+                                name="friendorg"
+                                #friendorg='ngModel'
+                                [(ngModel)]="jobreferral.friendorg"
+                                >
+                        <div [hidden]="friendorg.valid || friendorg.pristine" class="alert alert-danger">
+                            {{ jobreferral.friendname }}'s Current Organisation is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="degree">Degree</label>
+                        <input type="text"
+                                class="form-control"
+                                id="degree"
+                                placeholder="B.Tech/B.Sc"
+                                required
+                                name="degree"
+                                #degree='ngModel'
+                                [(ngModel)]="jobreferral.degree"
+                                >
+                        <div [hidden]="degree.valid || degree.pristine" class="alert alert-danger">
+                            Degree is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="branch">Branch</label>
+                        <input type="text"
+                                class="form-control"
+                                id="branch"
+                                placeholder="CSE/Economics"
+                                required
+                                name="branch"
+                                #branch='ngModel'
+                                [(ngModel)]="jobreferral.branch"
+                                >
+                        <div [hidden]="branch.valid || branch.pristine" class="alert alert-danger">
+                            Branch is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="institute">Institute</label>
+                        <input type="text"
+                                class="form-control"
+                                id="institute"
+                                placeholder="CIC/IIT/NIT"
+                                required
+                                name="institute"
+                                #institute='ngModel'
+                                [(ngModel)]="jobreferral.institute"
+                                >
+                        <div [hidden]="institute.valid || institute.pristine" class="alert alert-danger">
+                            Institute is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myphoneno">Phone Number</label>
+                        <input type="number"
+                                class="form-control"
+                                id="myphoneno"
+                                placeholder="9999888800"
+                                required
+                                minlength="10"
+                                name="myphoneno"
+                                #myphoneno='ngModel'
+                                [(ngModel)]="jobreferral.myphoneno"
+                                >
+                        <div [hidden]="myphoneno.valid || myphoneno.pristine" class="alert alert-danger">
+                            Phone Number is required
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+  
+        <div class="col-md-6">
+            <div>
+                <br><br><br><br><br><br>
+                <p>To, <br>
+                   {{ jobreferral.empname }} <br>
+                   {{ jobreferral.emporg }} <br>
+                   {{ jobreferral.empaddress }} <br>
+                   {{ jobreferral.empaddress2 }}
+                </p>
+  
+                <p>From, <br>
+  
+                   {{ jobreferral.myname }} <br>
+                   {{ jobreferral.myaddress }} <br>
+                   {{ jobreferral.myaddress2 }}
+                </p>
+                <p>Date : {{ jobreferral.dateofwriting }}</p>
+  
+                <p>Dear Mr/Ms {{ jobreferral.empname }}, </p>
+  
+                <p>I am {{ jobreferral.myname }}, {{ jobreferral.post }} from {{ jobreferral.department }} division in our company. I am aware of the fact that as an employee of our company, as per referral policy, we can refer any of our friends or relatives for suitable positions in our company. If the candidate is recruited, the employee is given a reward or incentive.</p>
+  
+                <p>I came across in our company website that there are a few vacancies for the post of {{ jobreferral.addpost }}. One of my friends, {{ jobreferral.friendname }} is currently a {{ jobreferral.friendpost }} at {{ jobreferral.friendorg }}. She has a good educational background with a {{ jobreferral.degree }} degree in {{ jobreferral.branch }} from {{ jobreferral.institute }} and is in the lookout for a suitable position.</p>
+
+                <p> I am sending her certificates along with her resume. Please verify her profile and if it is suitable for the company’s requirements kindly inform me so that I can pass on the information to her. I hope she will be a suitable candidate for the post.</p>
+  
+                <p>Looking forward to hear a positive response from you,</p>
+  
+                <p>Thanking you,</p>
+  
+                <p>Yours Sincerely,<br>
+                   {{ jobreferral.myname }} <br>
+                   {{ jobreferral.myphoneno }} </p>
+  
+  
+            </div>
+        </div>
+    </div>      
+  </div>
+  

@@ -1,0 +1,207 @@
+<div class="card container form-container">
+    <div class="row">        
+        <div class="col-md-6">
+            <h1>Business Application</h1>
+            
+            <div>
+                <form #businessapplication="ngForm">
+                    <div class="form-group">
+                        <label for="dateofwriting">Date of Writing</label>
+                        <input type="text"
+                                class="form-control"
+                                id="dateofwriting"
+                                required
+                                name="dateofwriting"
+                                #dateofwriting='ngModel'
+                                [(ngModel)]="businessapplication.dateofwriting"
+                                >
+                        <div [hidden]="dateofwriting.valid || dateofwriting.pristine" class="alert alert-danger">
+                            Date of Writing is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empname">Customer Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="empname"
+                                placeholder="ABC Kumar"
+                                required
+                                name="empname"
+                                #empname="ngModel"
+                                [(ngModel)]="businessapplication.empname"
+                                >
+                        <div [hidden]="empname.valid || empname.pristine" class="alert alert-danger">
+                            Customer name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empaddress">Customer Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="empaddress"
+                                placeholder="Investopad"
+                                required
+                                name="empaddress"
+                                #empaddress='ngModel'
+                                [(ngModel)]="businessapplication.empaddress"
+                                >
+                        <div [hidden]="empaddress.valid || empaddress.pristine" class="alert alert-danger">
+                            Customer Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="empaddress2">Customer Address Line 2</label>
+                      <input type="text"
+                              class="form-control"
+                              id="empaddress2"
+                              placeholder="Malviya Nagar, New Delhi - 110072"
+                              name="empaddress2"
+                              #empaddress2='ngModel'
+                              [(ngModel)]="businessapplication.empaddress2"
+                              >
+                    </div>
+                    <div class="form-group">
+                        <label for="myname">Your Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="myname"
+                                placeholder="XYZ Kumar"
+                                required
+                                name="myname"
+                                #myname="ngModel"
+                                [(ngModel)]="businessapplication.myname"
+                                >
+                        <div [hidden]="myname.valid || myname.pristine" class="alert alert-danger">
+                            Your name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress">Your Current Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress"
+                                placeholder="323, Saket"
+                                required
+                                name="myaddress"
+                                #myaddress='ngModel'
+                                [(ngModel)]="businessapplication.myaddress"
+                                >
+                        <div [hidden]="myaddress.valid || myaddress.pristine" class="alert alert-danger">
+                            Your Current Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress2">Your Current Address Line 2</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress2"
+                                placeholder="New Delhi - 110049"
+                                name="myaddress2"
+                                #myaddress2='ngModel'
+                                [(ngModel)]="businessapplication.myaddress2"
+                                >
+                    </div>
+                    <div class="form-group">
+                        <label for="yearsworked">Years Partner</label>
+                        <input type="number"
+                                class="form-control"
+                                id="yearsworked"
+                                required
+                                minlength="1"
+                                name="yearsworked"
+                                #yearsworked='ngModel'
+                                [(ngModel)]="businessapplication.yearsworked"
+                                >
+                        <div [hidden]="yearsworked.valid || yearsworked.pristine" class="alert alert-danger">
+                            Years Partner is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="newproposal">New Product Name</label>
+                        <input type="text"
+                                class="form-control"
+                                id="newproposal"
+                                placeholder="Sports Footwear"
+                                required
+                                name="newproposal"
+                                #newproposal='ngModel'
+                                [(ngModel)]="businessapplication.newproposal"
+                                >
+                        <div [hidden]="newproposal.valid || newproposal.pristine" class="alert alert-danger">
+                            New Product Name is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="period">Period</label>
+                        <input type="text"
+                                class="form-control"
+                                id="period"
+                                placeholder="annual/quartely/monthly"
+                                required
+                                name="period"
+                                #period='ngModel'
+                                [(ngModel)]="businessapplication.period"
+                                >
+                        <div [hidden]="period.valid || period.pristine" class="alert alert-danger">
+                            Period is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myphoneno">Phone Number</label>
+                        <input type="number"
+                                class="form-control"
+                                id="myphoneno"
+                                placeholder="9999888800"
+                                required
+                                minlength="10"
+                                name="myphoneno"
+                                #myphoneno='ngModel'
+                                [(ngModel)]="businessapplication.myphoneno"
+                                >
+                        <div [hidden]="myphoneno.valid || myphoneno.pristine" class="alert alert-danger">
+                            Phone Number is required
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+  
+        <div class="col-md-6">
+            <div>
+                <br><br><br><br><br><br>
+                <p>To, <br>
+                   {{ businessapplication.empname }} <br>
+                   {{ businessapplication.empaddress }} <br>
+                   {{ businessapplication.empaddress2 }}
+                </p>
+  
+                <p>From, <br>
+  
+                   {{ businessapplication.myname }} <br>
+                   {{ businessapplication.myaddress }} <br>
+                   {{ businessapplication.myaddress2 }}
+                </p>
+                <p>Date : {{ businessapplication.dateofwriting }}</p>
+  
+                <p>Dear Mr/Ms {{ businessapplication.empname }}, </p>
+  
+                <p>Your company has been our valuable customer for the past {{ businessapplication.yearsworked }} years. Your approach towards business is very professional and we never encountered any problems all these years.</p>
+  
+                <p>We are sending few business proposals related to {{ businessapplication.newproposal }} on {{ businessapplication.period }} contract basis. Please go through them and make a final decision. All our various plans are devised in such a manner that they will be cheaper in the long run. We have introduced several new models of {{ businessapplication.newproposal }} this year. You have a wide choice to choose from as per your requirement. We hope you will make a right choice.</p>
+
+                <p>We thank you very much for continuing business with us and hope it will be done in the similar manner in the coming years. We assure you of our best services always.</p>
+  
+                <p>Looking forward to hear a positive response from you,</p>
+  
+                <p>Thanking you,</p>
+  
+                <p>Yours Sincerely,<br>
+                   {{ businessapplication.myname }} <br>
+                   {{ businessapplication.myphoneno }} </p>
+  
+  
+            </div>
+        </div>
+    </div>      
+  </div>
+  

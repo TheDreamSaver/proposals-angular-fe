@@ -1,0 +1,234 @@
+<div class="card container form-container">
+    <div class="row">        
+        <div class="col-md-6">
+            <h1>Loan Application</h1>
+            
+            <div>
+                <form #loanapplication="ngForm">
+                    <div class="form-group">
+                        <label for="dateofwriting">Date of Writing</label>
+                        <input type="text"
+                                class="form-control"
+                                id="dateofwriting"
+                                required
+                                name="dateofwriting"
+                                #dateofwriting='ngModel'
+                                [(ngModel)]="loanapplication.dateofwriting"
+                                >
+                        <div [hidden]="dateofwriting.valid || dateofwriting.pristine" class="alert alert-danger">
+                            Date of Writing is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empname">Branch Manager’s Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="empname"
+                                placeholder="ABC Kumar"
+                                required
+                                name="empname"
+                                #empname="ngModel"
+                                [(ngModel)]="loanapplication.empname"
+                                >
+                        <div [hidden]="empname.valid || empname.pristine" class="alert alert-danger">
+                            Branch Manager’s Name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="emporg">Branch</label>
+                        <input type="text"
+                                class="form-control"
+                                id="emporg"
+                                placeholder="SBI Mayur Vihar"
+                                required
+                                name="emporg"
+                                #emporg='ngModel'
+                                [(ngModel)]="loanapplication.emporg"
+                                >
+                        <div [hidden]="emporg.valid || emporg.pristine" class="alert alert-danger">
+                            Branch is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="empaddress">Branch Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="empaddress"
+                                placeholder="Mayur Vihar"
+                                required
+                                name="empaddress"
+                                #empaddress='ngModel'
+                                [(ngModel)]="loanapplication.empaddress"
+                                >
+                        <div [hidden]="empaddress.valid || empaddress.pristine" class="alert alert-danger">
+                            Branch Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="empaddress2">Branch Address Line 2</label>
+                      <input type="text"
+                              class="form-control"
+                              id="empaddress2"
+                              placeholder="New Delhi - 110092"
+                              name="empaddress2"
+                              #empaddress2='ngModel'
+                              [(ngModel)]="loanapplication.empaddress2"
+                              >
+                    </div>
+                    <div class="form-group">
+                        <label for="myname">Your Name</label>
+                        <input type="text" 
+                                class="form-control"
+                                id="myname"
+                                placeholder="XYZ Kumar"
+                                required
+                                name="myname"
+                                #myname="ngModel"
+                                [(ngModel)]="loanapplication.myname"
+                                >
+                        <div [hidden]="myname.valid || myname.pristine" class="alert alert-danger">
+                            Your name required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress">Your Current Address</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress"
+                                placeholder="323, Saket"
+                                required
+                                name="myaddress"
+                                #myaddress='ngModel'
+                                [(ngModel)]="loanapplication.myaddress"
+                                >
+                        <div [hidden]="myaddress.valid || myaddress.pristine" class="alert alert-danger">
+                            Your Current Address is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myaddress2">Your Current Address Line 2</label>
+                        <input type="text"
+                                class="form-control"
+                                id="myaddress2"
+                                placeholder="New Delhi - 110049"
+                                name="myaddress2"
+                                #myaddress2='ngModel'
+                                [(ngModel)]="loanapplication.myaddress2"
+                                >
+                    </div>
+                    <div class="form-group">
+                        <label for="accountno">Account No.</label>
+                        <input type="number"
+                                class="form-control"
+                                id="accountno" 
+                                required
+                                name="accountno"
+                                #accountno='ngModel'
+                                [(ngModel)]="loanapplication.accountno"
+                                >
+                        <div [hidden]="accountno.valid || accountno.pristine" class="alert alert-danger">
+                            Account No. is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="years">Account Since</label>
+                        <input type="number"
+                                class="form-control"
+                                id="years"
+                                required
+                                name="years"
+                                #years='ngModel'
+                                [(ngModel)]="loanapplication.years"
+                                >
+                        <div [hidden]="years.valid || years.pristine" class="alert alert-danger">
+                            Account Since is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="typeofloan">Type of Loan</label>
+                        <input type="text"
+                                class="form-control"
+                                id="typeofloan"
+                                placeholder="Education/Car"
+                                required
+                                name="typeofloan"
+                                #typeofloan='ngModel'
+                                [(ngModel)]="loanapplication.typeofloan"
+                                >
+                        <div [hidden]="typeofloan.valid || typeofloan.pristine" class="alert alert-danger">
+                            Type of Loan is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="loanfor">Purpose for Loan</label>
+                        <input type="text"
+                                class="form-control"
+                                id="loanfor"
+                                placeholder="Higher Education"
+                                required
+                                name="loanfor"
+                                #loanfor='ngModel'
+                                [(ngModel)]="loanapplication.loanfor"
+                                >
+                        <div [hidden]="loanfor.valid || loanfor.pristine" class="alert alert-danger">
+                            Purpose for Loan is required
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="myphoneno">Phone Number</label>
+                        <input type="number"
+                                class="form-control"
+                                id="myphoneno"
+                                placeholder="9999888800"
+                                required
+                                minlength="10"
+                                name="myphoneno"
+                                #myphoneno='ngModel'
+                                [(ngModel)]="loanapplication.myphoneno"
+                                >
+                        <div [hidden]="myphoneno.valid || myphoneno.pristine" class="alert alert-danger">
+                            Phone Number is required
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+  
+        <div class="col-md-6">
+            <div>
+                <br><br><br><br><br><br>
+                <p>To, <br>
+                   {{ loanapplication.empname }} <br>
+                   {{ loanapplication.emporg }} <br>
+                   {{ loanapplication.empaddress }} <br>
+                   {{ loanapplication.empaddress2 }}
+                </p>
+  
+                <p>From, <br>
+  
+                   {{ loanapplication.myname }} <br>
+                   {{ loanapplication.myaddress }} <br>
+                   {{ loanapplication.myaddress2 }}
+                </p>
+                <p>Date : {{ loanapplication.dateofwriting }}</p>
+  
+                <p>Dear Mr/Ms {{ loanapplication.empname }}, </p>
+  
+                <p>I have a savings account in your bank with account no. {{ loanapplication.accountno }} for the past {{ loanapplication.years }} years. I want to apply for a {{ loanapplication.typeofloan }} loan for {{ loanapplication.loanfor }} .</p>
+  
+                <p>If you can inform me the details and formalities required for seeking the loan, I shall make all the arrangements and meet you at the earliest.</p>
+
+                <p>Looking forward to hear a positive response from you,</p>
+  
+                <p>Thanking you,</p>
+  
+                <p>Yours Sincerely,<br>
+                   {{ loanapplication.myname }} <br>
+                   {{ loanapplication.myphoneno }} </p>
+  
+  
+            </div>
+        </div>
+    </div>      
+  </div>
+  

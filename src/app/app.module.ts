@@ -15,10 +15,17 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { IndianCurrency } from './indianCurrency.pipe';
+import { JobApplicationComponent } from './templates/job-application/job-application.component';
+import { JobReferralComponent } from './templates/job-referral/job-referral.component';
+import { BusinessApplicationComponent } from './templates/business-application/business-application.component';
+import { AddressUpdateComponent } from './templates/address-update/address-update.component';
+import { LoanApplicationComponent } from './templates/loan-application/loan-application.component';
+import { ScholarshipApplicationComponent } from './templates/scholarship-application/scholarship-application.component';
+import { StartupJobComponent } from './templates/startup-job/startup-job.component';
 
 @NgModule({
   declarations: [
-     HomepageComponent, AppComponent, DocumentsComponent, ProposalListComponent, ProposalNewComponent, ProposalShowComponent, IndianCurrency
+     HomepageComponent, AppComponent, DocumentsComponent, ProposalListComponent, ProposalNewComponent, ProposalShowComponent, IndianCurrency, JobApplicationComponent, JobReferralComponent, BusinessApplicationComponent, AddressUpdateComponent, LoanApplicationComponent, ScholarshipApplicationComponent, StartupJobComponent
   ],
   imports: [
     BrowserModule, AppRoutingModule, FormsModule, NgbModule.forRoot(), HttpModule

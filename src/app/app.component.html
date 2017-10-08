@@ -6,7 +6,7 @@
       <li class="nav-item dropdown">
         <div ngbDropdown class="d-inline-block dropdown-links">
           <button class="btn btn-outline-primary" id="proposalDropdown" ngbDropdownToggle>
-            Proposals
+              Freelancing
           </button>
           <div class="dropdown-menu" aria-labelledby="proposalDropdown">
               <a class="dropdown-item" routerLink="/proposals" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Proposals</a>
@@ -14,6 +14,31 @@
           </div>
         </div>
       </li>
+      <li class="nav-item dropdown">
+        <div ngbDropdown class="d-inline-block dropdown-links">
+          <button class="btn btn-outline-primary" id="templateDropdown" ngbDropdownToggle>
+            Job Applications
+          </button>
+          <div class="dropdown-menu" aria-labelledby="templateDropdown">
+              <a class="dropdown-item" routerLink="templates/job-application" routerLinkActive="active">Job Application</a>
+              <a class="dropdown-item" routerLink="templates/startup-application" routerLinkActive="active">StartUp Job Application</a>
+              <a class="dropdown-item" routerLink="templates/job-referral" routerLinkActive="active">Job Referral</a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+          <div ngbDropdown class="d-inline-block dropdown-links">
+            <button class="btn btn-outline-primary" id="otherTemplateDropdown" ngbDropdownToggle>
+              Templates
+            </button>
+            <div class="dropdown-menu" aria-labelledby="otherTemplateDropdown">
+                <a class="dropdown-item" routerLink="templates/business-application" routerLinkActive="active">Business Application</a>
+                <a class="dropdown-item" routerLink="templates/loan-application" routerLinkActive="active">Loan Application</a>
+                <a class="dropdown-item" routerLink="templates/scholarship-application" routerLinkActive="active">Scholarship Application</a>
+                <a class="dropdown-item" routerLink="templates/address-update" routerLinkActive="active">Address Update</a>
+            </div>
+          </div>
+        </li>
     </ul>
   </div>
 </nav>
@@ -21,4 +46,6 @@
 <div class="app-body">
   <router-outlet></router-outlet>
 </div>
+
+<p id="footie"> Made with <span>❤</span> by <a href="https://github.com/TheDreamSaver/">The Dream Saver</a></p>
 
