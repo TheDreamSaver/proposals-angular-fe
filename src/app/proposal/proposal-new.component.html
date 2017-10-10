@@ -4,7 +4,7 @@
             <h1>Welcome to New Proposal</h1>
             
             <div>
-                <form (ngSubmit)="createProposal(proposal)" #proposalForm="ngForm">
+                <form (ngSubmit)="onSubmit(proposalForm)" #proposalForm="ngForm">
                     <div class="form-group">
                         <label for="customer">Customer Name</label>
                         <input type="text" 
@@ -96,10 +96,11 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="client_email">Client Email <em>(Optional)</em></label>
+                        <label for="client_email">Client Email</label>
                         <input type="email"
                                 class="form-control"
                                 id="client_email"
+                                required
                                 name="client_email"
                                 #client_email='ngModel'
                                 [(ngModel)]="proposal.client_email"

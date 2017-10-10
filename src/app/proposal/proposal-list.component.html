@@ -3,13 +3,19 @@
         <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
             <h1 class="mb-1 headline">Welcome to proposal list</h1>
         </a>
-
-        <span *ngFor = "let proposal of proposals">
-            <a (click)="goToShow(proposal)" class="proposal-link list-group-item list-group-item-action flex-column align-items-start">
-                <h5 class="mb-1 list-group-item-heading">{{proposal.customer}}</h5>
-                <p class="mb-1 list-group-item-text">{{ proposal.hourly_rate * proposal.estimated_hours | indianCurrency}}</p>
-            </a>
-        </span>
+        <div *ngIf="proposals?.length > 0;else noProposals">
+            <span *ngFor = "let proposal of proposals.reverse()">
+                <a (click)="goToShow(proposal)" class="proposal-link list-group-item list-group-item-action flex-column align-items-start">
+                    <h5 class="mb-1 list-group-item-heading">{{proposal.customer}}</h5>
+                    <p class="mb-1 list-group-item-text">{{ proposal.hourly_rate * proposal.estimated_hours | indianCurrency}}</p>
+                </a>
+            </span>
+        </div>
+        
     </div>    
+    <ng-template #noProposals>
+            <hr>
+            <h5 style="color:white; text-align:center">There are no proposals in the system</h5>
+    </ng-template>
 </div>
 

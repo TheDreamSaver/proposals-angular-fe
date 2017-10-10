@@ -1,7 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
-import { Observable } from 'rxjs/Rx';
+import { Component, OnInit } from '@angular/core';
+import { FlashMessagesService } from 'angular2-flash-messages';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { Proposal } from './proposal';
 import { ProposalService } from './proposal.service';
@@ -10,24 +9,34 @@ import { ProposalService } from './proposal.service';
     moduleId: module.id,
     selector: 'proposal-show',
     templateUrl: 'proposal-show.component.html',
-    styleUrls: ['proposal-show.component.css'],
-    providers: [ ProposalService ]
+    styleUrls: ['proposal-show.component.css']
 })
 export class ProposalShowComponent implements OnInit {
-    constructor(
-        private http: Http,
-        private proposalService: ProposalService,
-        private route: ActivatedRoute
-    ) {}
-
-    @Input()
+    id:string;
     proposal: Proposal;
   
-    ngOnInit(): void {
-      let proposalRequest = this.route.params
-          .flatMap((params: Params) =>
-            this.proposalService.getProposal(+params['id'])
-          );
-      proposalRequest.subscribe(response => this.proposal = response.json());
+    constructor(
+      public proposalService:ProposalService,
+      public router:Router,
+      public route:ActivatedRoute,
+      public flashMessagesService:FlashMessagesService
+    ) { }
+  
+    ngOnInit() {
+      // Get ID
+      this.id = this.route.snapshot.params['id'];
+  
+      // Get Proposal
+      this.proposalService.getProposal(this.id).subscribe(proposal => {
+        this.proposal = proposal;
+      });
     }
-  }
+
+    onDeleteClick(){
+        if(confirm("Are you sure to delete?")){
+          this.proposalService.deleteProposal(this.id);
+          this.flashMessagesService.show('Proposal Deleted', { cssClass: 'alert-success', timeout: 4000 });
+          this.router.navigate(['/proposals']);
+        }
+      }
+}

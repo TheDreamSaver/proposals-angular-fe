@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { Proposal } from './proposal';
 import { ProposalService } from './proposal.service';
+import { Router } from '@angular/router';
 
 @Component({
   moduleId: module.id,
@@ -15,18 +16,17 @@ export class ProposalNewComponent {
   submitted: boolean = false;
 
   constructor(
-    private proposalService: ProposalService
+    private proposalService: ProposalService,
+    public router:Router,
   ) {}
 
-  createProposal(proposal) {
-    this.submitted = true;
-    this.proposalService.createProposal(proposal)
-        .subscribe(
-          data => { return true },
-          error => { 
-            console.log("error saving proposal...");
-            return Observable.throw(error);
-          }
-        );
-  }      
+  onSubmit({value, valid}:{value:Proposal, valid:boolean}){
+    if(!valid){
+      this.router.navigate(['proposal-new']);
+    } else {
+      // Add new proposal
+      this.submitted = true;
+      this.proposalService.newProposal(value);
+    }
+  }
 }

@@ -1,6 +1,6 @@
 export class Proposal {
     constructor(
-        public id?: number,
+        public $key?:string,
         public customer?: string,
         public portfolio_url: string = "http://",
         public tools?: string,
