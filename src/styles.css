@@ -3,4 +3,5 @@
 body{
     background-image: url(assets/img/giphy.gif);
     font-family: 'Ubuntu', sans-serif;
+    background-size: cover;
 }
